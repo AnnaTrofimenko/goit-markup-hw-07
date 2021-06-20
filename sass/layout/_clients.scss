@@ -1,0 +1,30 @@
+.clients-box {
+  display: flex;
+  justify-content: space-between;
+}
+.clients-title {
+  margin-bottom: 50px;
+}
+.client__link {
+  @include border(1px solid var(--icon-color));
+  @include transition(border-color);
+  display: flex;
+  width: 170px;
+  height: 92px;
+  align-items: center;
+  justify-content: center;
+
+  &:hover,
+  &:focus {
+    border-color: var(--accent-color);
+  }
+}
+.client__logo {
+  @include transition(fill);
+  fill: var(--icon-color);
+
+  .client__link:hover &,
+  .client__link:focus & {
+    fill: var(--accent-color);
+  }
+}
